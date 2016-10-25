@@ -109,6 +109,10 @@ class ComposerStaticInit9582ba68614027f95f67cffafb5f492f
         ),
     );
 
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/../..' . '/src',
+    );
+
     public static $classMap = array (
         'SebastianBergmann\\Comparator\\ArrayComparator' => __DIR__ . '/..' . '/sebastian/comparator/src/ArrayComparator.php',
         'SebastianBergmann\\Comparator\\Comparator' => __DIR__ . '/..' . '/sebastian/comparator/src/Comparator.php',
@@ -145,6 +149,7 @@ class ComposerStaticInit9582ba68614027f95f67cffafb5f492f
             $loader->prefixLengthsPsr4 = ComposerStaticInit9582ba68614027f95f67cffafb5f492f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit9582ba68614027f95f67cffafb5f492f::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit9582ba68614027f95f67cffafb5f492f::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit9582ba68614027f95f67cffafb5f492f::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit9582ba68614027f95f67cffafb5f492f::$classMap;
 
         }, null, ClassLoader::class);
