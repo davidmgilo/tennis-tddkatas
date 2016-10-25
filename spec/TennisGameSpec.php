@@ -16,4 +16,8 @@ class TennisGameSpec extends ObjectBehavior
     function it_score_0_iguals (){
         $this->score()->shouldReturn('0 iguals');
     }
+
+    function it_score_15_0 (){
+        $this->score()->shouldReturn('15 - 0');
+    }
 }
