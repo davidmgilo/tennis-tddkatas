@@ -12,4 +12,8 @@ class TennisGameSpec extends ObjectBehavior
     {
         $this->shouldHaveType(TennisGame::class);
     }
+
+    function it_score_0_iguals (){
+        $this->score()->shouldReturn('0 iguals');
+    }
 }
