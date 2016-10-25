@@ -21,7 +21,7 @@ class TennisGame
 
     public function score()
     {
-        if($this->player1->points() > 3 || $this->player2->points() > 3){
+        if($this->tie()){
             $diferencia = $this->player1->points() - $this->player2->points();
             if ($diferencia > 0){
                 return "Avantatge " . $this->player1->name();
@@ -40,5 +40,13 @@ class TennisGame
         return $this->player1->score() . " - " . $this->player2->score();
 
 
+    }
+
+    /**
+     * @return bool
+     */
+    public function tie()
+    {
+        return $this->player1->points() > 3 || $this->player2->points() > 3;
     }
 }
