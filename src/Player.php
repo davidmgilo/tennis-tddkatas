@@ -18,6 +18,15 @@ class Player
         $this->score = $score;
     }
 
+    public function winpoint()
+    {
+        $this->score = "15";
+    }
+
+    public function score(){
+        return $this->score;
+    }
+
 
 
 }
