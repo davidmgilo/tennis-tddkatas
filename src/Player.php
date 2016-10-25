@@ -3,6 +3,13 @@
 
 class Player
 {
+    protected $code = [
+        0 => "0",
+        1 => "15",
+        2 => "30",
+        3 => "40",
+    ];
+
     protected $name;
 
     protected $score;
@@ -20,11 +27,11 @@ class Player
 
     public function winpoint()
     {
-        $this->score = "15";
+        $this->score += 1;
     }
 
     public function score(){
-        return $this->score;
+        return $this->code[$this->score];
     }
 
 
