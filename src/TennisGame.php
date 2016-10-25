@@ -47,13 +47,16 @@ class TennisGame
         $diferencia = $this->player1->points() - $this->player2->points();
         if ($diferencia == 0){
             return "Iguals";
-        }else {
-            $playerwins = $this->player1;
-            if($diferencia < 0){
-                $playerwins = $this->player2;
-            }
-            return $this->scoreAvantatge($playerwins);
         }
+
+        $playerwins = $this->player1;
+
+        if($diferencia < 0){
+                $playerwins = $this->player2;
+        }
+
+        return $this->scoreAvantatge($playerwins);
+        
 
     }
 
