@@ -12,26 +12,35 @@ class Player
 
     protected $name;
 
-    protected $score;
+    protected $points;
 
     /**
      * Player constructor.
      * @param $name
      * @param $score
      */
-    public function __construct($name, $score)
+    public function __construct($name, $points)
     {
         $this->name = $name;
-        $this->score = $score;
+        $this->points = $points;
     }
 
     public function winpoint()
     {
-        $this->score += 1;
+        $this->points += 1;
+    }
+
+    public function points()
+    {
+        return $this->points;
     }
 
     public function score(){
-        return $this->code[$this->score];
+        return $this->code[$this->points];
+    }
+
+    public function name(){
+        return $this->name;
     }
 
 

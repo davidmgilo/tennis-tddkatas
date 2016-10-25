@@ -112,4 +112,16 @@ class TennisGameSpec extends ObjectBehavior
         $this->player2->winpoint();
         $this->score()->shouldReturn('Avantatge Pepe');
     }
+
+    function it_score_deuce(){
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player1->winpoint();
+        $this->score()->shouldReturn('Iguals');
+    }
 }
