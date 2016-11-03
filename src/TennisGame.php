@@ -56,7 +56,7 @@ class TennisGame
         }
 
         return $this->scoreAvantatge($playerwins);
-        
+
 
     }
 
